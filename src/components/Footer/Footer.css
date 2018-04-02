@@ -1,0 +1,11 @@
+.footer-top {
+  background-color: rgb(189, 189, 189);
+  padding: 40px;
+}
+
+.footer-botttom {
+  background-color: #222;
+  padding: 20px 0 50px 0;
+  color: #fff;
+  font-size: 18px;
+}

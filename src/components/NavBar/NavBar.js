@@ -5,7 +5,7 @@ const NavBar = () => (
   <div className="container">
     <div className="row navbar">
       <div className="col-xs-4">
-        Clicky Game
+        Memory Game
       </div>
       <div className="col-xs-4">
         <span>Click an image to begin!</span>
