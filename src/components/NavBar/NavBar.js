@@ -3,7 +3,7 @@ import './NavBar.css';
 
 const NavBar = () => (
   <div className="container">
-    <div className="row navbar">
+    <div className="row navbar-fixed-top">
       <div className="col-xs-4">
         Memory Game
       </div>
