@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavBar from './components/NavBar';
 import Card from './components/Card';
 import Wrapper from './components/Wrapper';
+import Intro from './components/Intro';
 import Footer from './components/Footer';
 import cards from './cards.json';
 import './App.css';
@@ -20,12 +21,15 @@ class App extends Component {
   handleIncrement = (id) => {
     this.setState({ currentCount: this.state.currentCount + 1 });
 
+    // if user already guessed the card clicked
     if (this.state.beenclicked.includes(id)) {
       this.newgame();
     } else {
+        // update topscore if it's the same as currentscore
         if ((this.state.currentCount === this.state.topScore) || (this.state.currentCount > this.state.topScore)) {
           this.setState({ topScore: this.state.topScore + 1 });
         }
+      // save clicked card into beenclicked array
       const newBeenClicked = this.state.beenclicked.slice(0);
       newBeenClicked.push(id);
       this.setState({
@@ -34,7 +38,6 @@ class App extends Component {
         cards: this.shuffle(this.state.cards.slice(0)),
       })
     }
-    console.log(id);
   }
 
   shuffle = (a) => a.sort(function(a, b){return 0.5 - Math.random()})
@@ -43,7 +46,7 @@ class App extends Component {
     this.setState({
       currentCount: 0,
       beenclicked: [],
-      message: "Uh oh! Game over. Please try again!",
+      message: "Uh oh! Please try again!",
       cards: this.shuffle(this.state.cards)
     })
   }
@@ -58,6 +61,10 @@ class App extends Component {
             currentMessage={this.state.message}
           />
         </header>
+        <Wrapper>
+          <br />
+          <Intro />
+        </Wrapper>
         <Wrapper>
           {this.state.cards.map(card => (
             <Card
