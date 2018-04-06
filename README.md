@@ -21,5 +21,3 @@ Bootstrap
 Animate.css
 React
 ```
-
-## Table of Contents
