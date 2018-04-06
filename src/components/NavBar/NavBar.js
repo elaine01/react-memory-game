@@ -1,17 +1,18 @@
 import React from 'react';
 import './NavBar.css';
 
-const NavBar = () => (
+
+const NavBar = props => (
   <div className="container">
     <div className="row navbar-fixed-top">
       <div className="col-xs-4">
         Memory Game
       </div>
       <div className="col-xs-4">
-        <span>Click an image to begin!</span>
+        <span> {props.currentMessage} </span>
       </div>
       <div className="col-xs-4">
-        Score: <span>0</span> | Top Score: <span>0</span>
+       <span> Score: {props.currentCount} | Top Score: {props.topScore}</span>
       </div>
     </div>
   </div>
