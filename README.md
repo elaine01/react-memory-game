@@ -3,7 +3,7 @@
 Test your memory with this app built on React. The game is to earn as many points as you can. Click on an image for one point, but remember! If you click on the same image, the points are reset to zero.
 
 ## Demo
-[Demo here](#)
+[Demo here](https://react-memory-game.netlify.com/)
 
 ## Installation
 ```
